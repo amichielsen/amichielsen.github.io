@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shrek Soundboard</title>
+
+</head>
+<body>
+<div style="text-align: center; font-family: Arial, Helvetica, sans-serif;"><h1>Shrek Soundboard</h1></div>
+<div class="container">
+    <div class="center">
+        <button id="Buiten met briesje" onClick="play_sound(this.id)">Buiten met briesje</button>
+        <button id="Drakenburcht" onClick="play_sound(this.id)">Drakenburcht</button>
+        <button id="Ellende" onClick="play_sound(this.id)">Ellende</button>
+        <button id="Erwtensoep" onClick="play_sound(this.id)">Erwtensoep</button>
+        <button id="Fiona Poesjemauw" onClick="play_sound(this.id)">Fiona Poesjemauw</button>
+        <button id="Het kadatjes" onClick="play_sound(this.id)">Hete kadatjes</button>
+        <button id="Katakomben" onClick="play_sound(this.id)">Katakomben</button>
+
+    </div>
+    <div class="center">
+        <button id="Katman" onClick="play_sound(this.id)">Katman</button>
+        <button id="Moerbeiboom" onClick="play_sound(this.id)">Moerbeiboom</button>
+        <button id="Mosselman" onClick="play_sound(this.id)">Mosselman</button>
+        <button id="Poes op Rokin" onClick="play_sound(this.id)">Poes op Rokin</button>
+        <button id="Poesjes met bloejses" onClick="play_sound(this.id)">Poesjes met bloesjes</button>
+        <button id="Wafeltjes Varen" onClick="play_sound(this.id)">Wafeltjes Varen</button>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        width: 100px;
+        height: 100px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        min-width: 100px;
+        height: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px solid plum;
+        cursor: pointer;
+        color: forestgreen;
+        font-weight: 700;
+    }
+
+</style>
+
+<script>
+
+    var audio = null
+    function play_sound(clicked_id) {
+        if (audio != null){
+            audio.pause()
+        }
+        audio = new Audio(clicked_id + ".wav");
+        audio.play();
+    }
+</script>
